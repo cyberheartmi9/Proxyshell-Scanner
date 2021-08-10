@@ -23,9 +23,14 @@ requests:
         Accept-Language: en
         Connection: close
 
-    matchers-condition: 
+    matchers-condition: and
     matchers:
       - type: status
         status:
           - 302
 
+
+      - type: word
+        words:
+          - 'Location: /owa/auth/errorfe.aspx?httpCode'
+        part: header
